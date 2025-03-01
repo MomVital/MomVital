@@ -9,12 +9,8 @@ from variables import config
 import time
 import functools
 import json
+import jsonpickle
 
-def convert_to_serializable(obj):
-    if isinstance(obj, np.ndarray):
-        return obj.tolist()  # Convert NumPy arrays to lists
-    else:
-        return obj
 
 def execution_timer(func):
     """
@@ -177,14 +173,15 @@ def overall_process():
     hrv_results = hrv_process(nni_seq)
     
     result = {
-        "bvps": bvps,
+        # "bvps": bvps,
         "timesES": timesES,
         "bpmES": bpmES,
         "nni_seq": nni_seq,
         "hrv_results": hrv_results
     }
+    
     with open("data/temp_data.json", "w", encoding="utf-8") as file:
-        json.dump(result, file, indent=4, default=convert_to_serializable) 
+        file.write(jsonpickle.encode(result, indent=4))
 
 if __name__ == "__main__":
     temp = overall_process()
