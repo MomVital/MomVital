@@ -10,6 +10,11 @@ import time
 import functools
 import json
 
+def convert_to_serializable(obj):
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()  # Convert NumPy arrays to lists
+    raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+
 def execution_timer(func):
     """
     Decorator to measure and log the execution time of a function.
@@ -178,7 +183,7 @@ def overall_process():
         "hrv_results": hrv_results
     }
     with open("data/temp_data.json", "w", encoding="utf-8") as file:
-        json.dump(result, file, indent=4) 
+        json.dump(result, file, indent=4, default=convert_to_serializable) 
 
 if __name__ == "__main__":
     temp = overall_process()
