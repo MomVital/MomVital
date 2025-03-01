@@ -151,6 +151,7 @@ def hrv_process(nni_seq):
 
 
 def sub_keys(dict, keys):
+    print(f"keys: {type(keys)}, {keys}")
     for key in keys:
         if dict.get(key):
             dict[config.get(key)] = dict.pop(key)
