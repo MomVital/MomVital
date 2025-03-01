@@ -182,7 +182,7 @@ def overall_process():
         "timesES": timesES.tolist(),
         "bpmES": bpmES,
         "nni_seq": nni_seq.tolist(),
-        "hrv_results": 
+        "hrv_results": hrv_results_dict
     }
     with open("data/temp_data.json", "w", encoding="utf-8") as file:
         json.dump(result, file, indent=4)
