@@ -8,6 +8,7 @@ from variables import config
 
 import time
 import functools
+import json
 
 def execution_timer(func):
     """
@@ -174,12 +175,16 @@ def overall_process():
         "timesES": timesES,
         "bpmES": bpmES,
         "nni_seq": nni_seq,
-        "hrv_results": sub_keys(hrv_results, config.get('hrv_sub_keys'))
+        "hrv_results": hrv_results
     }
-    return sub_keys(result, config.get('result_sub_keys'))
+    with open("data/temp_data.json", "w", encoding="utf-8") as file:
+        json.dump(result, file, indent=4) 
 
 if __name__ == "__main__":
     temp = overall_process()
-    import json
-    with open("data/data.json", "w", encoding="utf-8") as file:
-        json.dump(temp, file, indent=4) 
+    # with open("data/data.json", "w", encoding="utf-8") as file:
+    #     result = json.load(file) 
+    # result['hrv_results'] = sub_keys(result['hrv_results'], config.get('hrv_sub_keys'))
+    # temp = sub_keys(result, config.get('result_sub_keys'))
+    # with open("data/data.json", "w", encoding="utf-8") as file:
+    #     json.dump(temp, file, indent=4) 
