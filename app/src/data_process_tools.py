@@ -4,7 +4,7 @@ import pyhrv.time_domain as td
 import statistics
 import time
 from scipy.signal import find_peaks
-from src.variables import config
+from variables import config
 
 import time
 import functools
