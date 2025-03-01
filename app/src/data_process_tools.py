@@ -198,7 +198,7 @@ if __name__ == "__main__":
     with open('data/temp_data.json', 'r') as file:
         data = json.load(file)
     data.pop('timesES')
-    data.pop('nni_seq')
+    data.pop('NNI_SEQ (Normal-to-Normal Interval Sequence) – A sequence of time intervals between consecutive normal heartbeats, crucial for heart rate variability (HRV) analysis and stress detection.')
     for k, v in data['hrv_results'].items():
         if k.startswith(('SDNN', 'RMSSD', 'PNN50')):
             data[k] = data['hrv_results'].pop(k)
