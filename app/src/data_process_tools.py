@@ -9,7 +9,6 @@ from variables import config
 import time
 import functools
 import json
-import jsonpickle
 
 
 def execution_timer(func):
@@ -171,6 +170,8 @@ def overall_process():
 
     # Step 3: Compute HRV results → Return final HRV data
     hrv_results = hrv_process(nni_seq)
+
+    print(f"{type(timesES), type(bpmES), type(nni_seq), type(hrv_results)}")
     
     result = {
         # "bvps": bvps,
@@ -179,9 +180,9 @@ def overall_process():
         "nni_seq": nni_seq,
         "hrv_results": hrv_results
     }
-    
-    with open("data/temp_data.json", "w", encoding="utf-8") as file:
-        file.write(jsonpickle.encode(result, indent=4))
+    print(result)
+    # with open("data/temp_data.json", "w", encoding="utf-8") as file:
+    #     json.dump(result, file, indent=4)
 
 if __name__ == "__main__":
     temp = overall_process()
