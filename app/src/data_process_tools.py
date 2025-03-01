@@ -13,7 +13,8 @@ import json
 def convert_to_serializable(obj):
     if isinstance(obj, np.ndarray):
         return obj.tolist()  # Convert NumPy arrays to lists
-    raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+    else:
+        return obj
 
 def execution_timer(func):
     """
