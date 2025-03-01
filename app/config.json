@@ -1,0 +1,6 @@
+{
+    "template": "\nQuestion: {question}\n\nContext: {context}\n\nAnswer: Let's think step by step. Start with 'Done!'",
+    "input_variables": [
+        "question", "context"
+    ]
+}

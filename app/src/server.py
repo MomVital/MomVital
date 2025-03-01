@@ -12,8 +12,8 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 def hello_world():
     return "Hi"
 
-@app.post("/upload/")
-async def upload_video(file: UploadFile = File(...)):
+@app.post("/analyze/")
+async def analyze(file: UploadFile = File(...)):
     try:
         file_path = os.path.join(UPLOAD_DIR, file.filename)
 
@@ -21,11 +21,16 @@ async def upload_video(file: UploadFile = File(...)):
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
 
+        process_results = await asyncio.to_thread(overall_process, file_path)
+
         return {
-            "message": "Video uploaded successfully",
-            "file_path": file_path,
-            "filename": file.filename
+            "message": "Processing complete",
+            "results": process_results
         }
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Upload failed: {str(e)}")
+
+
+@app.post("/get-suggest/")
+async def 

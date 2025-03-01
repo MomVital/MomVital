@@ -149,8 +149,13 @@ def hrv_process(nni_seq):
 
 @execution_timer
 def overall_process():
+    # Step 1: Process video → Extract bvps, timesES, bpmES
     bvps, timesES, bpmES = vhr_process()
+
+    # Step 2: Transform bvps → Get NN intervals (nni_seq)
     nni_seq = bvp_transform(bvps)
+    
+    # Step 3: Compute HRV results → Return final HRV data
     hrv_results = hrv_process(nni_seq)
     
     return {
