@@ -6,12 +6,9 @@ from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 import os
-import json
+from src.variables import config
 
 load_dotenv()
-
-with open('config.json', 'r', encoding='utf-8') as file:
-    config = json.load(file)
 
 llm = ChatOpenAI(
   openai_api_key=os.getenv("API_KEY"),
@@ -51,7 +48,7 @@ def get_content_by_week(week: int, vectordb=vectordb):
     return result
 
 
-def get_llm_response(query):
+def stream_llm_response(query):
     prompt = PromptTemplate(
                 template=config.get("template"), 
                 input_variables=config.get("input_variables")
@@ -61,8 +58,18 @@ def get_llm_response(query):
     output = []
     for chunk in llm_chain.stream(query):
         print(chunk.content, end="", flush=True)
-        output.append(chunk.content)
-    final_output = "".join(output)
+        yield chunk.content
+
+
+def get_llm_response(query):
+    prompt = PromptTemplate(
+                template=config.get("template"), 
+                input_variables=config.get("input_variables")
+            )
+    llm_chain = prompt | llm
+
+    output = []
+    return llm_chain.invoke(query).content
 
 
 if __name__ == "__main__":

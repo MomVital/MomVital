@@ -33,4 +33,8 @@ async def analyze(file: UploadFile = File(...)):
 
 
 @app.post("/get-suggest/")
-async def 
+async def get_llm_suggest(data: dict):
+    try:
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Get LLM Suggestion failed: {str(e)}")
