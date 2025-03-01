@@ -154,7 +154,6 @@ def hrv_process(nni_seq, histogram_path='data/nni_histogram.png'):
 
 
 def sub_keys(dict, keys):
-    print(f"keys: {type(keys)}, {keys}")
     for key in keys:
         if dict.get(key):
             dict[config.get(key)] = dict.pop(key)
@@ -189,11 +188,13 @@ def overall_process():
         "timesES": [convert_np_type(item) for item in timesES.tolist()],
         "bpmES": [item.tolist() for item in bpmES],
         "nni_seq": [convert_np_type(item) for item in nni_seq.tolist()],
-        "hrv_results": hrv_results_dict
+        "hrv_results": sub_keys(hrv_results_dict, config.get('hrv_sub_keys'))
     }
+    result = sub_keys(result, config.get('result_sub_keys'))
 
     with open("data/temp_data.json", "wb") as file:
         file.write(orjson.dumps(result, option=orjson.OPT_INDENT_2))
+    return result
 
 if __name__ == "__main__":
     temp = overall_process()
