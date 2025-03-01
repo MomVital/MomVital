@@ -201,6 +201,7 @@ if __name__ == "__main__":
     data.pop('NNI_SEQ (Normal-to-Normal Interval Sequence) – A sequence of time intervals between consecutive normal heartbeats, crucial for heart rate variability (HRV) analysis and stress detection.')
     for k, v in data['hrv_results'].items():
         if k.startswith(('SDNN', 'RMSSD', 'PNN50')):
-            data[k] = data['hrv_results'].pop(k)
+            data[k] = data['hrv_results'][k]
+    data.pop('hrv_results')
 
     print(data)
