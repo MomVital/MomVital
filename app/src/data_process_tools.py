@@ -173,7 +173,7 @@ def overall_process():
 
     hrv_results_dict = dict(hrv_results)
     for k, v in hrv_results_dict.items():
-        print(f"{key}: {type(v)}")
+        print(f"{k}: {type(v)}")
         if isinstance(v, np.ndarray):
             hrv_results_dict[k] = v.tolist()
     
