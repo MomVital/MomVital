@@ -171,14 +171,18 @@ def overall_process():
     # Step 3: Compute HRV results → Return final HRV data
     hrv_results = hrv_process(nni_seq)
 
-    print(f"{type(timesES), type(bpmES), type(nni_seq), type(hrv_results)}")
+    hrv_results_dict = dict(hrv_results)
+    for k, v in hrv_results_dict.items():
+        print(f"{key}: {type(v)}")
+        if isinstance(v, np.ndarray):
+            hrv_results_dict[k] = v.tolist()
     
     result = {
         # "bvps": bvps,
         "timesES": timesES.tolist(),
         "bpmES": bpmES,
         "nni_seq": nni_seq.tolist(),
-        "hrv_results": dict(hrv_results)
+        "hrv_results": 
     }
     with open("data/temp_data.json", "w", encoding="utf-8") as file:
         json.dump(result, file, indent=4)
