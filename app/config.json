@@ -4,7 +4,7 @@
         "question", "context"
     ],
     "hrv_sub_keys": ["sdnn", "rmssd", "pnn50"],
-    "result_sub_keys": ["bvps", "bpmES", "nni_seq"],
+    "result_sub_keys": ["bvps", "bpmES"],
     "sdnn": "SDNN (Standard Deviation of NN intervals) – Measures overall HRV, lower values indicate higher stress.",
     "rmssd": "RMSSD (Root Mean Square of Successive Differences) – Measures short-term HRV, lower values suggest increased stress.",
     "pnn50": "PNN50 (Percentage of NN50) – The percentage of successive RR intervals differing by more than 50 ms, lower values indicate higher stress.",

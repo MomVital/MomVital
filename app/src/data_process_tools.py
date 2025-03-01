@@ -191,16 +191,16 @@ def overall_process():
         "hrv_results": sub_keys(hrv_results_dict, config.get('hrv_sub_keys'))
     }
     result = sub_keys(result, config.get('result_sub_keys'))
-
-    with open("data/temp_data.json", "wb") as file:
-        file.write(orjson.dumps(result, option=orjson.OPT_INDENT_2))
     return result
 
 if __name__ == "__main__":
-    temp = overall_process()
-    # with open("data/data.json", "w", encoding="utf-8") as file:
-    #     result = json.load(file) 
-    # result['hrv_results'] = sub_keys(result['hrv_results'], config.get('hrv_sub_keys'))
-    # temp = sub_keys(result, config.get('result_sub_keys'))
-    # with open("data/data.json", "w", encoding="utf-8") as file:
-    #     json.dump(temp, file, indent=4) 
+    # temp = overall_process()
+    with open('data/temp_data.json', 'r') as file:
+        data = json.dump(file)
+    data.pop('timesES')
+    data.pop('nni_seq')
+    for k, v in data['hrv_results'].items():
+        if k.startswith(('SDNN', 'RMSSD', 'PNN50')):
+            data[k] = data['hrv_results'].pop(k)
+
+    print(data)
