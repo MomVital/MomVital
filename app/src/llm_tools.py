@@ -1,6 +1,6 @@
 from langchain.docstore.document import Document
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
 import re
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
