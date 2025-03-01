@@ -175,9 +175,9 @@ def overall_process():
     
     result = {
         # "bvps": bvps,
-        "timesES": timesES.to_list(),
+        "timesES": timesES.tolist(),
         "bpmES": bpmES,
-        "nni_seq": nni_seq.to_list(),
+        "nni_seq": nni_seq.tolist(),
         "hrv_results": dict(hrv_results)
     }
     with open("data/temp_data.json", "w", encoding="utf-8") as file:
