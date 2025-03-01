@@ -1,0 +1,829 @@
+nohup: ignoring input
+[W 2025-02-27 22:42:58.963 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[W 2025-02-27 22:42:59.032 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2025-02-27 22:42:59.032 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-02-27 22:42:59.037 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-02-27 22:42:59.042 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-02-27 22:42:59.046 ServerApp] notebook | extension was successfully linked.
+[I 2025-02-27 22:42:59.263 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-02-27 22:42:59.284 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-02-27 22:42:59.286 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-02-27 22:42:59.287 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-02-27 22:42:59.289 LabApp] JupyterLab extension loaded from /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyterlab
+[I 2025-02-27 22:42:59.289 LabApp] JupyterLab application directory is /home/ubuntu/anaconda3/envs/codefest/share/jupyter/lab
+[I 2025-02-27 22:42:59.290 LabApp] Extension Manager is 'pypi'.
+[I 2025-02-27 22:42:59.302 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-02-27 22:42:59.306 ServerApp] notebook | extension was successfully loaded.
+[I 2025-02-27 22:42:59.307 ServerApp] Serving notebooks from local directory: /home/ubuntu/app
+[I 2025-02-27 22:42:59.307 ServerApp] Jupyter Server 2.14.1 is running at:
+[I 2025-02-27 22:42:59.307 ServerApp] http://ip-172-31-66-182:8888/tree?token=e4834b4e7f991aba416297d0093114278b27e79eb7015b71
+[I 2025-02-27 22:42:59.307 ServerApp]     http://127.0.0.1:8888/tree?token=e4834b4e7f991aba416297d0093114278b27e79eb7015b71
+[I 2025-02-27 22:42:59.307 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-02-27 22:42:59.310 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/jpserver-25724-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-66-182:8888/tree?token=e4834b4e7f991aba416297d0093114278b27e79eb7015b71
+        http://127.0.0.1:8888/tree?token=e4834b4e7f991aba416297d0093114278b27e79eb7015b71
+[I 2025-02-27 22:42:59.330 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-02-27 22:43:15.703 ServerApp] 302 GET / (@71.192.155.247) 0.60ms
+[W 2025-02-27 22:43:20.259 ServerApp] Notebook test.ipynb is not trusted
+[W 2025-02-27 22:43:22.033 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 22:43:22.655 ServerApp] Kernel started: 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9
+[I 2025-02-27 22:43:23.177 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-27 22:43:23.234 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-27 22:43:23.282 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-27 22:43:27.399 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+2025-02-27 22:43:28.992137: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-27 22:43:29.151708: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-27 22:43:29.906032: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-27 22:43:29.906156: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-27 22:43:29.906164: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+[I 2025-02-27 22:45:09.246 ServerApp] Kernel restarted: 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9
+[I 2025-02-27 22:45:09.270 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-27 22:45:09.309 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-27 22:45:09.309 ServerApp] Restoring connection for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+2025-02-27 22:45:13.027601: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-27 22:45:13.181838: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-27 22:45:13.890049: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-27 22:45:13.890158: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-27 22:45:13.890166: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+[I 2025-02-27 22:45:22.387 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 22:45:22.387 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 22:47:21.889 ServerApp] Kernel restarted: 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9
+[I 2025-02-27 22:47:21.912 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-27 22:47:21.946 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-27 22:47:21.946 ServerApp] Restoring connection for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-27 22:47:22.527 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 22:47:22.527 ServerApp] Notebook test.ipynb is not trusted
+2025-02-27 22:47:25.663630: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-27 22:47:25.819484: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-27 22:47:26.542703: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-27 22:47:26.542799: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-27 22:47:26.542807: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+[I 2025-02-27 22:48:25.471 ServerApp] Kernel restarted: 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9
+[I 2025-02-27 22:48:25.496 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-27 22:48:25.532 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-27 22:48:25.532 ServerApp] Restoring connection for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+2025-02-27 22:48:29.297009: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-27 22:48:29.448299: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-27 22:48:30.162740: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-27 22:48:30.162837: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-27 22:48:30.162845: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+[I 2025-02-27 22:49:22.691 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 22:49:22.692 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 22:51:22.844 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 22:51:22.844 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 22:52:01.607 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 22:52:01.607 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 22:54:01.897 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 22:54:01.897 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 22:56:02.338 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 22:56:02.338 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 22:58:02.492 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 22:58:02.492 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 23:00:02.628 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 23:00:02.628 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 23:04:02.778 ServerApp] Saving file at /test.ipynb
+[W 2025-02-27 23:04:02.779 ServerApp] Notebook test.ipynb is not trusted
+[I 2025-02-27 23:05:58.729 ServerApp] Creating new file in 
+[I 2025-02-27 23:06:03.517 ServerApp] Saving file at /test.ipynb
+[I 2025-02-27 23:06:06.138 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-27 23:06:14.097 ServerApp] Saving file at /test2.py
+[I 2025-02-27 23:06:14.723 ServerApp] Saving file at /test2.py
+[I 2025-02-27 23:07:28.221 ServerApp] Saving file at /test2.py
+[I 2025-02-27 23:07:28.832 ServerApp] Saving file at /test2.py
+[I 2025-02-27 23:08:14.270 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[W 2025-02-27 23:08:27.077 ServerApp] delete /test2.py
+[I 2025-02-27 23:08:58.672 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-27 23:09:03.358 ServerApp] Saving file at /bvp_to_hrv.py
+[I 2025-02-27 23:09:04.354 ServerApp] Saving file at /bvp_to_hrv.py
+[I 2025-02-27 23:09:04.537 ServerApp] Saving file at /bvp_to_hrv.py
+[I 2025-02-27 23:10:04.384 ServerApp] Saving file at /test.ipynb
+[I 2025-02-27 23:12:04.521 ServerApp] Saving file at /test.ipynb
+[I 2025-02-28 00:07:07.332 JupyterNotebookApp] 302 GET /edit/bvp_to_hrv.py (@71.192.155.247) 0.64ms
+[I 2025-02-28 00:07:10.094 JupyterNotebookApp] 302 GET /notebooks/test.ipynb (@71.192.155.247) 0.66ms
+[I 2025-02-28 00:24:07.404 JupyterNotebookApp] 302 GET /edit/bvp_to_hrv.py (@71.192.155.247) 0.59ms
+[I 2025-02-28 00:24:10.274 JupyterNotebookApp] 302 GET /notebooks/test.ipynb (@71.192.155.247) 0.64ms
+[I 2025-02-28 00:24:17.154 JupyterNotebookApp] 302 GET /tree? (@71.192.155.247) 0.64ms
+[I 2025-02-28 00:40:20.412 ServerApp] Saving file at /test.ipynb
+[I 2025-02-28 00:42:21.231 ServerApp] Kernel restarted: 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9
+[I 2025-02-28 00:42:21.260 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-28 00:42:21.297 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 00:42:21.297 ServerApp] Restoring connection for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-28 00:44:20.558 ServerApp] Saving file at /test.ipynb
+[I 2025-02-28 00:44:23.086 ServerApp] Kernel interrupted: 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9
+[I 2025-02-28 00:46:20.700 ServerApp] Saving file at /test.ipynb
+[I 2025-02-28 00:47:34.728 ServerApp] Saving file at /test.ipynb
+[I 2025-02-28 00:47:59.568 ServerApp] Saving file at /bvp_to_hrv.py
+[I 2025-02-28 00:48:04.237 ServerApp] Saving file at /bvp_to_hrv.py
+[I 2025-02-28 00:55:42.137 ServerApp] Kernel restarted: 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9
+[I 2025-02-28 00:55:42.164 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-28 00:55:42.207 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 00:55:42.207 ServerApp] Restoring connection for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-28 00:57:00.676 ServerApp] Saving file at /test.ipynb
+[I 2025-02-28 00:57:15.539 ServerApp] Saving file at /test.ipynb
+[I 2025-02-28 00:57:24.052 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:c92d0063-114a-4ca6-a383-1c01457a20c4
+[I 2025-02-28 00:57:27.824 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 00:57:28.121 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:da285f4c-4027-4e03-9f0a-316f2c9b94df
+[I 2025-02-28 00:57:33.948 ServerApp] Saving file at /test.py
+[I 2025-02-28 00:57:37.739 ServerApp] Saving file at /test.py
+[I 2025-02-28 00:57:50.774 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 00:57:51.083 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:298ded21-7ba2-4bd6-b50e-8f7cc679fd51
+[I 2025-02-28 00:57:53.335 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 00:57:53.667 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:56b40f61-1b48-4b63-a80f-8e7350bcf83e
+[I 2025-02-28 00:57:59.813 ServerApp] Saving file at /bvp_to_hrv.py
+[W 2025-02-28 00:58:29.596 ServerApp] Notebook get_web_info.ipynb is not trusted
+[I 2025-02-28 00:58:30.451 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[W 2025-02-28 00:58:30.609 ServerApp] Notebook get_web_info.ipynb is not trusted
+[I 2025-02-28 00:58:30.931 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:f95f7a39-fc9e-45ff-960e-c801b881193f
+[I 2025-02-28 00:58:31.291 ServerApp] Kernel started: 4275eb06-a943-48d3-a16e-dc47ff33c562
+[I 2025-02-28 00:58:31.767 ServerApp] Connecting to kernel 4275eb06-a943-48d3-a16e-dc47ff33c562.
+[I 2025-02-28 00:58:31.828 ServerApp] Connecting to kernel 4275eb06-a943-48d3-a16e-dc47ff33c562.
+[I 2025-02-28 00:58:31.877 ServerApp] Connecting to kernel 4275eb06-a943-48d3-a16e-dc47ff33c562.
+[I 2025-02-28 00:58:37.895 ServerApp] Connecting to kernel 4275eb06-a943-48d3-a16e-dc47ff33c562.
+[I 2025-02-28 00:59:19.204 ServerApp] Kernel restarted: 4275eb06-a943-48d3-a16e-dc47ff33c562
+[I 2025-02-28 00:59:19.234 ServerApp] Starting buffering for 4275eb06-a943-48d3-a16e-dc47ff33c562:43d7dd9b-d776-4eb1-a32a-a2d5f7da25fc
+[I 2025-02-28 00:59:19.270 ServerApp] Connecting to kernel 4275eb06-a943-48d3-a16e-dc47ff33c562.
+[I 2025-02-28 00:59:19.270 ServerApp] Restoring connection for 4275eb06-a943-48d3-a16e-dc47ff33c562:43d7dd9b-d776-4eb1-a32a-a2d5f7da25fc
+[I 2025-02-28 00:59:24.194 ServerApp] Kernel started: 167658ba-6988-461d-a4f1-6aedf6e87f21
+[I 2025-02-28 00:59:24.194 ServerApp] Kernel shutdown: 4275eb06-a943-48d3-a16e-dc47ff33c562
+[I 2025-02-28 00:59:24.638 ServerApp] Connecting to kernel 167658ba-6988-461d-a4f1-6aedf6e87f21.
+[I 2025-02-28 01:00:31.000 ServerApp] Saving file at /get_web_info.ipynb
+[W 2025-02-28 01:00:31.000 ServerApp] Notebook get_web_info.ipynb is not trusted
+[I 2025-02-28 01:02:37.705 ServerApp] Creating new file in 
+[W 2025-02-28 01:02:43.519 ServerApp] 400 PATCH /api/contents/untitled.txt?1740704563213 (71.192.155.247): Cannot rename file or directory '/untitled.txt'
+[W 2025-02-28 01:02:43.519 ServerApp] wrote error: "Cannot rename file or directory '/untitled.txt'"
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/contents/handlers.py", line 202, in patch
+        raise web.HTTPError(400, f"Cannot rename file or directory {path!r}")
+    tornado.web.HTTPError: HTTP 400: Bad Request (Cannot rename file or directory '/untitled.txt')
+[W 2025-02-28 01:02:43.523 ServerApp] 400 PATCH /api/contents/untitled.txt?1740704563213 (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 4.94ms referer=http://52.20.137.195:8888/tree?
+[I 2025-02-28 01:02:52.985 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 01:02:53.051 ServerApp] Connecting to kernel 167658ba-6988-461d-a4f1-6aedf6e87f21.
+[I 2025-02-28 01:02:53.313 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:878f8681-83d5-483c-a53a-e98130b66468
+[W 2025-02-28 01:03:00.757 ServerApp] 400 PATCH /api/contents/untitled.txt?1740704580452 (71.192.155.247): Cannot rename file or directory '/untitled.txt'
+[W 2025-02-28 01:03:00.757 ServerApp] wrote error: "Cannot rename file or directory '/untitled.txt'"
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/contents/handlers.py", line 202, in patch
+        raise web.HTTPError(400, f"Cannot rename file or directory {path!r}")
+    tornado.web.HTTPError: HTTP 400: Bad Request (Cannot rename file or directory '/untitled.txt')
+[W 2025-02-28 01:03:00.757 ServerApp] 400 PATCH /api/contents/untitled.txt?1740704580452 (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.54ms referer=http://52.20.137.195:8888/tree?
+[W 2025-02-28 01:03:04.693 ServerApp] delete /untitled.txt
+[I 2025-02-28 01:04:36.858 ServerApp] Starting buffering for 167658ba-6988-461d-a4f1-6aedf6e87f21:43d7dd9b-d776-4eb1-a32a-a2d5f7da25fc
+[I 2025-02-28 01:04:39.784 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 01:04:39.857 ServerApp] Connecting to kernel 167658ba-6988-461d-a4f1-6aedf6e87f21.
+[I 2025-02-28 01:04:40.296 ServerApp] Starting buffering for 167658ba-6988-461d-a4f1-6aedf6e87f21:07b0e4f5-0b32-4f9e-8bb3-9bc7f2c20241
+[I 2025-02-28 01:04:40.297 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:6dfc4633-9224-4c67-963e-f800d3c57b71
+[I 2025-02-28 01:04:43.853 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 01:04:43.904 ServerApp] Connecting to kernel 167658ba-6988-461d-a4f1-6aedf6e87f21.
+[I 2025-02-28 01:04:44.407 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:4236f534-f2a7-44e7-98d0-9a6ece2b8cdb
+[I 2025-02-28 01:04:44.413 ServerApp] Starting buffering for 167658ba-6988-461d-a4f1-6aedf6e87f21:677b08f7-e5fd-4162-bf6b-ee42633317bc
+[I 2025-02-28 01:04:44.827 ServerApp] Kernel started: 650ecded-3b7b-48aa-a891-2706450bf480
+[I 2025-02-28 01:04:45.287 ServerApp] Connecting to kernel 650ecded-3b7b-48aa-a891-2706450bf480.
+[I 2025-02-28 01:05:02.093 ServerApp] Saving file at /src/test.ipynb
+[I 2025-02-28 01:05:03.354 ServerApp] Starting buffering for 650ecded-3b7b-48aa-a891-2706450bf480:917ca322-141d-4737-bf36-6759ec345f55
+[I 2025-02-28 01:05:05.437 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 01:05:05.501 ServerApp] Connecting to kernel 167658ba-6988-461d-a4f1-6aedf6e87f21.
+[I 2025-02-28 01:05:05.554 ServerApp] Connecting to kernel 650ecded-3b7b-48aa-a891-2706450bf480.
+[I 2025-02-28 01:05:05.764 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:5911cea1-a82f-4910-b132-4ba74310b278
+[I 2025-02-28 01:05:05.807 ServerApp] Starting buffering for 167658ba-6988-461d-a4f1-6aedf6e87f21:39998aa6-3a15-49d1-829e-8d7e60bda987
+[I 2025-02-28 01:05:05.861 ServerApp] Starting buffering for 650ecded-3b7b-48aa-a891-2706450bf480:4debdaa3-52e1-4086-b0d1-4404376e2492
+[I 2025-02-28 01:05:11.403 ServerApp] Saving file at /src/bvp_to_hrv.py
+[I 2025-02-28 01:05:15.359 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 01:05:15.435 ServerApp] Connecting to kernel 167658ba-6988-461d-a4f1-6aedf6e87f21.
+[I 2025-02-28 01:05:15.497 ServerApp] Connecting to kernel 650ecded-3b7b-48aa-a891-2706450bf480.
+[I 2025-02-28 01:05:15.730 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:a4196c86-0b9f-42cf-997c-24463234e462
+[I 2025-02-28 01:05:15.731 ServerApp] Starting buffering for 167658ba-6988-461d-a4f1-6aedf6e87f21:b75811dd-933d-4ed6-9ed1-6636ae8dc975
+[I 2025-02-28 01:05:15.738 ServerApp] Starting buffering for 650ecded-3b7b-48aa-a891-2706450bf480:6095a5a4-3d75-4c52-9835-4e537e5c32a9
+[I 2025-02-28 01:05:19.947 ServerApp] Saving file at /src/test.py
+[W 2025-02-28 01:05:22.484 ServerApp] Notebook src/get_web_info.ipynb is not trusted
+[I 2025-02-28 01:05:23.639 ServerApp] Connecting to kernel 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9.
+[I 2025-02-28 01:05:23.692 ServerApp] Connecting to kernel 167658ba-6988-461d-a4f1-6aedf6e87f21.
+[I 2025-02-28 01:05:23.769 ServerApp] Connecting to kernel 650ecded-3b7b-48aa-a891-2706450bf480.
+[W 2025-02-28 01:05:23.784 ServerApp] Notebook src/get_web_info.ipynb is not trusted
+[I 2025-02-28 01:05:24.110 ServerApp] Starting buffering for 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9:323319f1-4d8a-455e-bb99-7adec3e8f5ca
+[I 2025-02-28 01:05:24.111 ServerApp] Starting buffering for 650ecded-3b7b-48aa-a891-2706450bf480:99b01375-1bde-473f-a1fc-4fd7eb21f804
+[I 2025-02-28 01:05:24.112 ServerApp] Starting buffering for 167658ba-6988-461d-a4f1-6aedf6e87f21:c45316f2-3e26-4484-bf8d-3e7b790a39ea
+[I 2025-02-28 01:05:24.362 ServerApp] Kernel started: 4fe1fa77-2bef-481f-9f4e-0219eb95dcea
+[I 2025-02-28 01:05:24.839 ServerApp] Connecting to kernel 4fe1fa77-2bef-481f-9f4e-0219eb95dcea.
+2025-02-28 01:05:34.532016: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-02-28 01:05:34.676804: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-28 01:05:35.534101: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-28 01:05:35.534252: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/cv2/../../lib64:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64:
+2025-02-28 01:05:35.534262: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+[I 2025-02-28 01:07:24.056 ServerApp] Saving file at /src/get_web_info.ipynb
+[W 2025-02-28 01:07:24.057 ServerApp] Notebook src/get_web_info.ipynb is not trusted
+[I 2025-02-28 01:10:51.696 ServerApp] Saving file at /src/get_web_info.ipynb
+[W 2025-02-28 01:10:51.697 ServerApp] Notebook src/get_web_info.ipynb is not trusted
+[E 2025-02-28 02:03:22.011 ServerApp] Uncaught exception GET /tree/src (71.192.155.247)
+    HTTPServerRequest(protocol='http', host='52.20.137.195:8888', method='GET', uri='/tree/src', version='HTTP/1.1', remote_ip='71.192.155.247')
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:22.013 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 739, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1298, in send_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:22.014 JupyterNotebookApp] {
+      "Host": "52.20.137.195:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+    }
+[E 2025-02-28 02:03:22.014 JupyterNotebookApp] 500 GET /tree/src (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 6.03ms referer=None
+[E 2025-02-28 02:03:22.066 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 2688, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 1064, in validate_absolute_path
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 2900, in validate_absolute_path
+    tornado.web.HTTPError: HTTP 404: Not Found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 739, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '404.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1298, in send_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[W 2025-02-28 02:03:22.067 ServerApp] 404 GET /favicon.ico (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.54ms referer=http://52.20.137.195:8888/tree/src
+[I 2025-02-28 02:03:27.108 ServerApp] 302 GET / (@71.192.155.247) 0.46ms
+[E 2025-02-28 02:03:27.140 ServerApp] Uncaught exception GET /tree? (71.192.155.247)
+    HTTPServerRequest(protocol='http', host='52.20.137.195:8888', method='GET', uri='/tree?', version='HTTP/1.1', remote_ip='71.192.155.247')
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:27.140 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 739, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1298, in send_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:27.142 JupyterNotebookApp] {
+      "Host": "52.20.137.195:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+    }
+[E 2025-02-28 02:03:27.142 JupyterNotebookApp] 500 GET /tree? (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 4.34ms referer=None
+[E 2025-02-28 02:03:29.322 ServerApp] Uncaught exception GET /tree? (71.192.155.247)
+    HTTPServerRequest(protocol='http', host='52.20.137.195:8888', method='GET', uri='/tree?', version='HTTP/1.1', remote_ip='71.192.155.247')
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:29.323 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 739, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1298, in send_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:29.324 JupyterNotebookApp] {
+      "Host": "52.20.137.195:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+    }
+[E 2025-02-28 02:03:29.324 JupyterNotebookApp] 500 GET /tree? (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 4.49ms referer=None
+[E 2025-02-28 02:03:29.374 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 2688, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 1064, in validate_absolute_path
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 2900, in validate_absolute_path
+    tornado.web.HTTPError: HTTP 404: Not Found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 739, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '404.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1298, in send_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[W 2025-02-28 02:03:29.375 ServerApp] 404 GET /favicon.ico (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.43ms referer=http://52.20.137.195:8888/tree?
+[E 2025-02-28 02:03:30.150 ServerApp] Uncaught exception GET /tree? (71.192.155.247)
+    HTTPServerRequest(protocol='http', host='52.20.137.195:8888', method='GET', uri='/tree?', version='HTTP/1.1', remote_ip='71.192.155.247')
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:30.151 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 739, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1298, in send_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:30.152 JupyterNotebookApp] {
+      "Host": "52.20.137.195:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+    }
+[E 2025-02-28 02:03:30.152 JupyterNotebookApp] 500 GET /tree? (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 4.51ms referer=None
+[E 2025-02-28 02:03:30.846 ServerApp] Uncaught exception GET /tree? (71.192.155.247)
+    HTTPServerRequest(protocol='http', host='52.20.137.195:8888', method='GET', uri='/tree?', version='HTTP/1.1', remote_ip='71.192.155.247')
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:30.847 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/app.py", line 156, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'tree.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 739, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '500.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 28, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search path: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/notebook/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1298, in send_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/extension/handler.py", line 30, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[E 2025-02-28 02:03:30.848 JupyterNotebookApp] {
+      "Host": "52.20.137.195:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+    }
+[E 2025-02-28 02:03:30.848 JupyterNotebookApp] 500 GET /tree? (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 4.49ms referer=None
+[C 2025-02-28 02:04:10.664 ServerApp] received signal 15, stopping
+[I 2025-02-28 02:04:10.664 ServerApp] Shutting down 5 extensions
+[I 2025-02-28 02:04:10.665 ServerApp] Shutting down 4 kernels
+[I 2025-02-28 02:04:10.665 ServerApp] Kernel shutdown: 4fe1fa77-2bef-481f-9f4e-0219eb95dcea
+[I 2025-02-28 02:04:10.666 ServerApp] Kernel shutdown: 650ecded-3b7b-48aa-a891-2706450bf480
+[I 2025-02-28 02:04:10.666 ServerApp] Kernel shutdown: 167658ba-6988-461d-a4f1-6aedf6e87f21
+[I 2025-02-28 02:04:10.667 ServerApp] Kernel shutdown: 9c5dee77-ed35-4d14-ba2a-8f21a1c596a9
+[E 2025-02-28 02:04:10.819 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 2688, in get
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 1064, in validate_absolute_path
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 2900, in validate_absolute_path
+    tornado.web.HTTPError: HTTP 404: Not Found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 739, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: '404.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1298, in send_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 666, in render_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/base/handlers.py", line 661, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+      File "/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jinja2/loaders.py", line 209, in get_source
+    jinja2.exceptions.TemplateNotFound: 'error.html' not found in search paths: '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server', '/home/ubuntu/anaconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/templates'
+[W 2025-02-28 02:04:10.823 ServerApp] 404 GET /static/favicons/favicon-notebook.ico (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 5.70ms referer=http://52.20.137.195:8888/notebooks/src/get_web_info.ipynb
