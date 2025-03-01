@@ -175,14 +175,13 @@ def overall_process():
     
     result = {
         # "bvps": bvps,
-        "timesES": timesES,
+        "timesES": timesES.to_list(),
         "bpmES": bpmES,
-        "nni_seq": nni_seq,
-        "hrv_results": hrv_results
+        "nni_seq": nni_seq.to_list(),
+        "hrv_results": dict(hrv_results)
     }
-    print(result)
-    # with open("data/temp_data.json", "w", encoding="utf-8") as file:
-    #     json.dump(result, file, indent=4)
+    with open("data/temp_data.json", "w", encoding="utf-8") as file:
+        json.dump(result, file, indent=4)
 
 if __name__ == "__main__":
     temp = overall_process()
