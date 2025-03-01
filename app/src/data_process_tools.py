@@ -4,6 +4,7 @@ import pyhrv.time_domain as td
 import statistics
 import time
 from scipy.signal import find_peaks
+from src.variables import config
 
 import time
 import functools
@@ -144,8 +145,17 @@ def hrv_process(nni_seq):
     results['nni_histogram'].savefig('../data/nni_histogram.png')
     result_dict = results.__dict__
     result_dict.pop('nni_histogram', None)
+    result_dict
 
     return result_dict
+
+
+def sub_keys(dict, keys):
+    for key in keys:
+        if dict.get(key):
+            dict[config.get(key)] = dict.pop(key)
+    return dict
+
 
 @execution_timer
 def overall_process():
@@ -154,17 +164,21 @@ def overall_process():
 
     # Step 2: Transform bvps → Get NN intervals (nni_seq)
     nni_seq = bvp_transform(bvps)
-    
+
     # Step 3: Compute HRV results → Return final HRV data
     hrv_results = hrv_process(nni_seq)
     
-    return {
+    result = {
         "bvps": bvps,
         "timesES": timesES,
         "bpmES": bpmES,
         "nni_seq": nni_seq,
-        "hrv_results": hrv_results
+        "hrv_results": sub_keys(hrv_results, config.get('hrv_sub_keys'))
     }
+    return sub_keys(result, config.get('result_sub_keys'))
 
 if __name__ == "__main__":
     temp = overall_process()
+    import json
+    with open("data/data.json", "w", encoding="utf-8") as file:
+        json.dump(temp, file, indent=4) 
