@@ -59,7 +59,7 @@ def adaptive_peak_detection(signal, fs=30):
 
 
 @execution_timer
-def vhr_process(videoFileName='../data/vid.avi'):
+def vhr_process(videoFileName='data/vid.avi'):
     """
     Process a video file to extract BVP (Blood Volume Pulse) signals and estimated heart rate.
 
@@ -142,7 +142,7 @@ def hrv_process(nni_seq):
         dict: Dictionary containing HRV time-domain metrics.
     """
     results = td.time_domain(nni=nni_seq)
-    results['nni_histogram'].savefig('../data/nni_histogram.png')
+    results['nni_histogram'].savefig('data/nni_histogram.png')
     result_dict = results.__dict__
     result_dict.pop('nni_histogram', None)
     result_dict
