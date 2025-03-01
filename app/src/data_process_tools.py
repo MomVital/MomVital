@@ -161,6 +161,14 @@ def sub_keys(dict, keys):
     return dict
 
 
+def convert_np_type(obj):
+    if isinstance(obj, (np.int64, np.int32)):  
+        return int(obj)  # Convert int64 to Python int
+    elif isinstance(obj, (np.float64, np.float32)):
+        return float(obj)
+    return obj
+
+
 @execution_timer
 def overall_process():
     # Step 1: Process video → Extract bvps, timesES, bpmES
@@ -173,15 +181,16 @@ def overall_process():
     hrv_results = hrv_process(nni_seq)
 
     hrv_results_dict = dict(hrv_results)
+    for k, v in hrv_results_dict.items():
+        hrv_results_dict[k] = convert_np_type(v)
     
     result = {
         # "bvps": bvps,
-        "timesES": timesES.tolist(),
+        "timesES": [convert_np_type(item) for item in timesES.tolist()],
         "bpmES": [item.tolist() for item in bpmES],
-        "nni_seq": nni_seq.tolist(),
+        "nni_seq": [convert_np_type(item) for item in nni_seq.tolist()],
         "hrv_results": hrv_results_dict
     }
-
 
     with open("data/temp_data.json", "wb") as file:
         file.write(orjson.dumps(result, option=orjson.OPT_INDENT_2))
