@@ -20,7 +20,7 @@ llm = ChatOpenAI(
 )
 
 embeddings_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-vectordb = FAISS.load_local("../data/vectordb", embeddings_model, allow_dangerous_deserialization=True)
+vectordb = FAISS.load_local("data/vectordb", embeddings_model, allow_dangerous_deserialization=True)
 
 
 def search(query, vectordb=vectordb, k=20):
