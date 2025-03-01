@@ -9,6 +9,7 @@ from variables import config
 import time
 import functools
 import json
+import orjson
 
 
 def execution_timer(func):
@@ -181,8 +182,9 @@ def overall_process():
         "hrv_results": hrv_results_dict
     }
 
-    with open("data/temp_data.json", "w", encoding="utf-8") as file:
-        json.dump(result, file, indent=4)
+
+    with open("data/temp_data.json", "wb") as file:
+        file.write(orjson.dumps(result, option=orjson.OPT_INDENT_2))
 
 if __name__ == "__main__":
     temp = overall_process()
