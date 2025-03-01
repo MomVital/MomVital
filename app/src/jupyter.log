@@ -1,0 +1,129 @@
+nohup: ignoring input
+[W 2025-02-28 02:43:17.736 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[W 2025-02-28 02:43:17.858 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2025-02-28 02:43:17.859 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-02-28 02:43:17.864 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-02-28 02:43:17.868 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-02-28 02:43:17.873 ServerApp] notebook | extension was successfully linked.
+[I 2025-02-28 02:43:18.087 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-02-28 02:43:18.121 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-02-28 02:43:18.124 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-02-28 02:43:18.125 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-02-28 02:43:18.126 LabApp] JupyterLab extension loaded from /home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyterlab
+[I 2025-02-28 02:43:18.126 LabApp] JupyterLab application directory is /home/ubuntu/miniconda3/envs/codefest/share/jupyter/lab
+[I 2025-02-28 02:43:18.127 LabApp] Extension Manager is 'pypi'.
+[I 2025-02-28 02:43:18.139 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-02-28 02:43:18.143 ServerApp] notebook | extension was successfully loaded.
+[I 2025-02-28 02:43:18.144 ServerApp] Serving notebooks from local directory: /home/ubuntu/app/src
+[I 2025-02-28 02:43:18.144 ServerApp] Jupyter Server 2.14.1 is running at:
+[I 2025-02-28 02:43:18.144 ServerApp] http://ip-172-31-66-182:8888/tree?token=a24fe6d00e3231287ef69a44edcd4dd7de5317c70c5500c4
+[I 2025-02-28 02:43:18.144 ServerApp]     http://127.0.0.1:8888/tree?token=a24fe6d00e3231287ef69a44edcd4dd7de5317c70c5500c4
+[I 2025-02-28 02:43:18.144 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-02-28 02:43:18.149 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/jpserver-34769-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-66-182:8888/tree?token=a24fe6d00e3231287ef69a44edcd4dd7de5317c70c5500c4
+        http://127.0.0.1:8888/tree?token=a24fe6d00e3231287ef69a44edcd4dd7de5317c70c5500c4
+[I 2025-02-28 02:43:18.169 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2025-02-28 02:43:25.032 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710604634 (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:25.033 ServerApp] wrote error: 'Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da'
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 501, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 532, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da)
+[W 2025-02-28 02:43:25.039 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710604634 (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 7.33ms referer=http://52.20.137.195:8888/notebooks/get_web_info.ipynb
+[W 2025-02-28 02:43:26.105 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da/channels?session_id=6d5113d5-9133-4edc-b749-931def65c13f (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:26.125 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da/channels?session_id=6d5113d5-9133-4edc-b749-931def65c13f (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 20.41ms referer=None
+[W 2025-02-28 02:43:26.157 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710605781 (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:26.157 ServerApp] wrote error: 'Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da'
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 501, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 532, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da)
+[W 2025-02-28 02:43:26.158 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710605781 (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.18ms referer=http://52.20.137.195:8888/notebooks/get_web_info.ipynb
+[W 2025-02-28 02:43:28.136 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da/channels?session_id=6d5113d5-9133-4edc-b749-931def65c13f (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:28.136 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da/channels?session_id=6d5113d5-9133-4edc-b749-931def65c13f (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.40ms referer=None
+[W 2025-02-28 02:43:28.163 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710607791 (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:28.163 ServerApp] wrote error: 'Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da'
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 501, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 532, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da)
+[W 2025-02-28 02:43:28.164 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710607791 (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.18ms referer=http://52.20.137.195:8888/notebooks/get_web_info.ipynb
+[W 2025-02-28 02:43:31.718 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da/channels?session_id=6d5113d5-9133-4edc-b749-931def65c13f (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:31.718 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da/channels?session_id=6d5113d5-9133-4edc-b749-931def65c13f (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.39ms referer=None
+[W 2025-02-28 02:43:31.745 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710611373 (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:31.745 ServerApp] wrote error: 'Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da'
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 501, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 532, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da)
+[W 2025-02-28 02:43:31.746 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710611373 (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.16ms referer=http://52.20.137.195:8888/notebooks/get_web_info.ipynb
+[W 2025-02-28 02:43:35.324 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da/channels?session_id=6d5113d5-9133-4edc-b749-931def65c13f (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:35.325 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da/channels?session_id=6d5113d5-9133-4edc-b749-931def65c13f (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.39ms referer=None
+[W 2025-02-28 02:43:35.351 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710614980 (71.192.155.247): Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da
+[W 2025-02-28 02:43:35.352 ServerApp] wrote error: 'Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da'
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 501, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/ubuntu/miniconda3/envs/codefest/lib/python3.9/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 532, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da)
+[W 2025-02-28 02:43:35.352 ServerApp] 404 GET /api/kernels/b38b2d0b-0cf0-4654-9b6a-2ec25dd8b0da?1740710614980 (9e6f7f56c9ba4acebf2a5542462b9e0c@71.192.155.247) 1.19ms referer=http://52.20.137.195:8888/notebooks/get_web_info.ipynb
+[W 2025-02-28 02:44:08.953 ServerApp] Notebook get_web_info.ipynb is not trusted
+[I 2025-02-28 02:44:09.415 ServerApp] Kernel started: ff898794-2627-4d0d-8b2f-56e7bc08ca38
+[I 2025-02-28 02:44:09.897 ServerApp] Connecting to kernel ff898794-2627-4d0d-8b2f-56e7bc08ca38.
+[I 2025-02-28 02:44:09.957 ServerApp] Connecting to kernel ff898794-2627-4d0d-8b2f-56e7bc08ca38.
+[I 2025-02-28 02:44:10.037 ServerApp] Connecting to kernel ff898794-2627-4d0d-8b2f-56e7bc08ca38.
+[I 2025-02-28 02:44:26.504 ServerApp] Kernel started: f92c22c6-f5b1-4fe8-8c7d-e76033c6eb12
+[I 2025-02-28 02:44:26.505 ServerApp] Kernel shutdown: ff898794-2627-4d0d-8b2f-56e7bc08ca38
+[I 2025-02-28 02:44:26.998 ServerApp] Connecting to kernel f92c22c6-f5b1-4fe8-8c7d-e76033c6eb12.
+[I 2025-02-28 02:46:09.233 ServerApp] Saving file at /get_web_info.ipynb
+[W 2025-02-28 02:46:09.234 ServerApp] Notebook get_web_info.ipynb is not trusted
+[I 2025-02-28 02:48:10.075 ServerApp] Saving file at /get_web_info.ipynb
+[W 2025-02-28 02:48:10.075 ServerApp] Notebook get_web_info.ipynb is not trusted
+[I 2025-02-28 02:48:44.433 JupyterNotebookApp] 302 GET /notebooks/src/get_web_info.ipynb (@71.192.155.247) 0.63ms
+[C 2025-02-28 02:56:29.636 ServerApp] received signal 15, stopping
+[I 2025-02-28 02:56:29.669 ServerApp] Shutting down 5 extensions
+[I 2025-02-28 02:56:29.669 ServerApp] Shutting down 1 kernel
+[I 2025-02-28 02:56:29.670 ServerApp] Kernel shutdown: f92c22c6-f5b1-4fe8-8c7d-e76033c6eb12
