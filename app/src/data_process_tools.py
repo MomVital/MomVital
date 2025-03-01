@@ -196,7 +196,7 @@ def overall_process():
 if __name__ == "__main__":
     # temp = overall_process()
     with open('data/temp_data.json', 'r') as file:
-        data = json.dump(file)
+        data = json.load(file)
     data.pop('timesES')
     data.pop('nni_seq')
     for k, v in data['hrv_results'].items():
