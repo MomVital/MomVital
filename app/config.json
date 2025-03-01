@@ -1,5 +1,5 @@
 {
-    "template": "\nQuestion: {question}\n\nContext: {context}\n\nAnswer: Let's think step by step.",
+    "template": "\nAccording to the given: {question}\n\nContext: {context}\n\nAnswer: Let's think step by step.",
     "input_variables": [
         "question", "context"
     ],
@@ -9,6 +9,6 @@
     "rmssd": "RMSSD (Root Mean Square of Successive Differences) – Measures short-term HRV, lower values suggest increased stress.",
     "pnn50": "PNN50 (Percentage of NN50) – The percentage of successive RR intervals differing by more than 50 ms, lower values indicate higher stress.",
     "bvps": "BVPs (Blood Volume Pulse signals) – Measures blood volume changes in microvascular tissue, commonly obtained via photoplethysmography (PPG) for heart rate and stress analysis.",
-    "bpms": "BPMs (Beats Per Minute) – Represents the number of heartbeats per minute, used to monitor cardiovascular health and detect anomalies.",
+    "bpmES": "BPMs (Beats Per Minute) – Represents the number of heartbeats per minute, used to monitor cardiovascular health and detect anomalies.",
     "nni_seq": "NNI_SEQ (Normal-to-Normal Interval Sequence) – A sequence of time intervals between consecutive normal heartbeats, crucial for heart rate variability (HRV) analysis and stress detection."
 }
