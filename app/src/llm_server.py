@@ -91,7 +91,7 @@ async def get_overall_analyze(request: Request):
             raise Exception(f"Missing required keys: {list(missing_keys)}")
         
         query = {k: data[k] for k in required_keys}
-        query["context"] = search_filter(search(data['history_result'], k=50), week_filter=6)
+        query["context"] = search_filter(search(data['history_result'], k=50), week_filter=int(data['week']))
         
         result = invoke_llm_output(chain, query)
         match = re.search(r'```json\s*(.*?)\s*```', result, re.DOTALL)
