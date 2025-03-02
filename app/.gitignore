@@ -1,2 +1,5 @@
 data/
 faiss/
+.env
+uploaded_videos/
+*.log

@@ -4,11 +4,11 @@ import pyhrv.time_domain as td
 import statistics
 import time
 from scipy.signal import find_peaks
+from variables import config
 
 import time
 import functools
 import json
-import orjson
 
 
 def execution_timer(func):
@@ -144,7 +144,7 @@ def hrv_process(nni_seq, histogram_path='data/nni_histogram.png'):
         dict: Dictionary containing HRV time-domain metrics.
     """
     results = td.time_domain(nni=nni_seq)
-    # results['nni_histogram'].savefig(histogram_path)
+    results['nni_histogram'].savefig(histogram_path)
     result_dict = results.__dict__
     result_dict.pop('nni_histogram', None)
     result_dict
@@ -152,51 +152,18 @@ def hrv_process(nni_seq, histogram_path='data/nni_histogram.png'):
     return result_dict
 
 
-def convert_np_type(obj):
-    if isinstance(obj, (np.int64, np.int32)):  
-        return int(obj)  # Convert int64 to Python int
-    elif isinstance(obj, (np.float64, np.float32)):
-        return float(obj)
-    return obj
+def sub_keys(dict, keys):
+    print(f"keys: {type(keys)}, {keys}")
+    for key in keys:
+        if dict.get(key):
+            dict[config.get(key)] = dict.pop(key)
+    return dict
 
-
-# def remove_useless_data(data):
-#     data.pop('timesES')
-#     data.pop('nni_seq')
-#     for k, v in data['hrv_results'].items():
-#         if k in ['sdnn', 'rmssd', 'pnn50']:
-#             data[k] = data['hrv_results'][k]
-#     data.pop('hrv_results')
-#     return data
-
-def normalize(value, min_val, max_val):
-    """Normalize a value to a range between 0 and 1."""
-    return (value - min_val) / (max_val - min_val) if max_val > min_val else 0
-
-def calculate_stress_level(sdnn, rmssd, pnn50, min_sdnn=20, max_sdnn=500, 
-                           min_rmssd=20, max_rmssd=500, min_pnn50=0, max_pnn50=100):
-    """
-    Calculate stress level based on SDNN, RMSSD, and PNN50.
-    The output is a score between 0 (low stress) and 100 (high stress).
-    """
-    # Normalize values
-    norm_sdnn = normalize(sdnn, min_sdnn, max_sdnn)
-    norm_rmssd = normalize(rmssd, min_rmssd, max_rmssd)
-    norm_pnn50 = normalize(pnn50, min_pnn50, max_pnn50)
-    
-    # Weights for each metric
-    W1, W2, W3 = 0.40, 0.40, 0.20
-    
-    # Compute stress score
-    stress_score = 100 * (1 - (W1 * norm_sdnn + W2 * norm_rmssd + W3 * norm_pnn50))
-    
-    # Ensure the score is within bounds (0-100)
-    return np.clip(stress_score, 0, 100)
 
 @execution_timer
-def overall_process(videoFileName='data/vid.avi'):
+def overall_process():
     # Step 1: Process video → Extract bvps, timesES, bpmES
-    bvps, timesES, bpmES = vhr_process(videoFileName)
+    bvps, timesES, bpmES = vhr_process()
 
     # Step 2: Transform bvps → Get NN intervals (nni_seq)
     nni_seq = bvp_transform(bvps)
@@ -206,26 +173,31 @@ def overall_process(videoFileName='data/vid.avi'):
 
     hrv_results_dict = dict(hrv_results)
     for k, v in hrv_results_dict.items():
-        hrv_results_dict[k] = convert_np_type(v)
-
-    bpms_lst = [item.tolist() for item in bpmES]
-    sdnn = hrv_results_dict['sdnn']
-    rmssd = hrv_results_dict['rmssd']
-    pnn50 = hrv_results_dict['pnn50']
-    stress_lvl = convert_np_type(calculate_stress_level(sdnn, rmssd, pnn50))
+        print(f"{k}: {type(v)}")
+        if isinstance(v, np.ndarray):
+            hrv_results_dict[k] = v.tolist()
     
     result = {
-        "bpms": sum(bpms_lst) / len(bpms_lst),
-        "sdnn": sdnn,
-        "rmssd": rmssd,
-        "pnn50": pnn50,
-        "stress_level": stress_lvl
+        # "bvps": bvps,
+        "timesES": timesES.tolist(),
+        "bpmES": bpmES,
+        "nni_seq": nni_seq.tolist(),
+        "hrv_results": hrv_results_dict
     }
-    return orjson.loads(orjson.dumps(result, option=orjson.OPT_INDENT_2))
+
+    for k, v in result.items():
+        print(f"{k}: {type(v)}")
+        if isinstance(v, np.ndarray):
+            result[k] = v.tolist()
+            
+    with open("data/temp_data.json", "w", encoding="utf-8") as file:
+        json.dump(result, file, indent=4)
 
 if __name__ == "__main__":
-    # temp = overall_process()
-    with open('data/temp_data.json', 'r') as file:
-        data = json.load(file)
-
-    # print(remove_useless_data(data))
+    temp = overall_process()
+    # with open("data/data.json", "w", encoding="utf-8") as file:
+    #     result = json.load(file) 
+    # result['hrv_results'] = sub_keys(result['hrv_results'], config.get('hrv_sub_keys'))
+    # temp = sub_keys(result, config.get('result_sub_keys'))
+    # with open("data/data.json", "w", encoding="utf-8") as file:
+    #     json.dump(temp, file, indent=4) 
