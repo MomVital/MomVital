@@ -23,4 +23,9 @@ nohup uvicorn src.llm_server:app --host:0.0.0.0 --port=3001 > llm_server.log 2>&
 ```
 6. Now your llm server is also running. The backend development is now finished, go to frontend and run the UI to use the app.
 
+## Metric
+pyVHR:
+![image](https://github.com/user-attachments/assets/f6612fbb-5896-4866-bcef-8efcf5020d34)
+
+
 
