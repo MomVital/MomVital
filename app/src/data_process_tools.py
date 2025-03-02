@@ -213,7 +213,7 @@ def overall_process(videoFileName='data/vid.avi'):
     sdnn = hrv_results_dict['sdnn']
     rmssd = hrv_results_dict['rmssd']
     pnn50 = hrv_results_dict['pnn50']
-    stress_lvl = calculate_stress_level(sdnn, rmssd, pnn50)
+    stress_lvl = convert_np_type(calculate_stress_level(sdnn, rmssd, pnn50))
     
     result = {
         "bpms": sum(bpms_lst) / len(bpms_lst),
