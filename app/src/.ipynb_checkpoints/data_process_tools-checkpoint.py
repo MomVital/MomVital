@@ -4,12 +4,11 @@ import pyhrv.time_domain as td
 import statistics
 import time
 from scipy.signal import find_peaks
-from src.variables import config
+from variables import config
 
 import time
 import functools
 import json
-import orjson
 
 
 def execution_timer(func):
@@ -153,28 +152,18 @@ def hrv_process(nni_seq, histogram_path='data/nni_histogram.png'):
     return result_dict
 
 
-def convert_np_type(obj):
-    if isinstance(obj, (np.int64, np.int32)):  
-        return int(obj)  # Convert int64 to Python int
-    elif isinstance(obj, (np.float64, np.float32)):
-        return float(obj)
-    return obj
-
-
-def remove_useless_data(data):
-    data.pop('timesES')
-    data.pop('nni_seq')
-    for k, v in data['hrv_results'].items():
-        if k in ['sdnn', 'rmssd', 'pnn50']:
-            data[k] = data['hrv_results'][k]
-    data.pop('hrv_results')
-    return data
+def sub_keys(dict, keys):
+    print(f"keys: {type(keys)}, {keys}")
+    for key in keys:
+        if dict.get(key):
+            dict[config.get(key)] = dict.pop(key)
+    return dict
 
 
 @execution_timer
-def overall_process(videoFileName='data/vid.avi'):
+def overall_process():
     # Step 1: Process video → Extract bvps, timesES, bpmES
-    bvps, timesES, bpmES = vhr_process(videoFileName)
+    bvps, timesES, bpmES = vhr_process()
 
     # Step 2: Transform bvps → Get NN intervals (nni_seq)
     nni_seq = bvp_transform(bvps)
@@ -184,22 +173,31 @@ def overall_process(videoFileName='data/vid.avi'):
 
     hrv_results_dict = dict(hrv_results)
     for k, v in hrv_results_dict.items():
-        hrv_results_dict[k] = convert_np_type(v)
-
-    bpms_lst = [item.tolist() for item in bpmES]
+        print(f"{k}: {type(v)}")
+        if isinstance(v, np.ndarray):
+            hrv_results_dict[k] = v.tolist()
     
     result = {
-        "bpms": sum(bpms_lst) / len(bpms_lst),
-        "sdnn": hrv_results_dict['sdnn'],
-        "rmssd": hrv_results_dict['rmssd'],
-        "pnn50": hrv_results_dict['pnn50'],
-        "stress_level": (hrv_results_dict['sdnn'] + hrv_results_dict['rmssd'] + hrv_results_dict['pnn50']) / 3 * 100
+        # "bvps": bvps,
+        "timesES": timesES.tolist(),
+        "bpmES": bpmES,
+        "nni_seq": nni_seq.tolist(),
+        "hrv_results": hrv_results_dict
     }
-    return orjson.dumps(result, option=orjson.OPT_INDENT_2)
+
+    for k, v in result.items():
+        print(f"{k}: {type(v)}")
+        if isinstance(v, np.ndarray):
+            result[k] = v.tolist()
+            
+    with open("data/temp_data.json", "w", encoding="utf-8") as file:
+        json.dump(result, file, indent=4)
 
 if __name__ == "__main__":
-    # temp = overall_process()
-    with open('data/temp_data.json', 'r') as file:
-        data = json.load(file)
-
-    print(remove_useless_data(data))
+    temp = overall_process()
+    # with open("data/data.json", "w", encoding="utf-8") as file:
+    #     result = json.load(file) 
+    # result['hrv_results'] = sub_keys(result['hrv_results'], config.get('hrv_sub_keys'))
+    # temp = sub_keys(result, config.get('result_sub_keys'))
+    # with open("data/data.json", "w", encoding="utf-8") as file:
+    #     json.dump(temp, file, indent=4) 
