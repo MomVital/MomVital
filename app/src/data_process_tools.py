@@ -185,13 +185,15 @@ def overall_process(videoFileName='data/vid.avi'):
     hrv_results_dict = dict(hrv_results)
     for k, v in hrv_results_dict.items():
         hrv_results_dict[k] = convert_np_type(v)
+
+    bpms_lst = [item.tolist() for item in bpmES]
     
     result = {
-        # "bvps": bvps,
-        "timesES": [convert_np_type(item) for item in timesES.tolist()],
-        "bpmES": [item.tolist() for item in bpmES],
-        "nni_seq": [convert_np_type(item) for item in nni_seq.tolist()],
-        "hrv_results": hrv_results_dict
+        "bpms": sum(bpms_lst) / len(bpms_lst),
+        "sdnn": hrv_results_dict['sdnn'],
+        "rmssd": hrv_results_dict['rmssd'],
+        "pnn50": hrv_results_dict['pnn50'],
+        "stress_level": (hrv_results_dict['sdnn'] + hrv_results_dict['rmssd'] + hrv_results_dict['pnn50']) / 3 * 100
     }
     return orjson.dumps(result, option=orjson.OPT_INDENT_2)
 
