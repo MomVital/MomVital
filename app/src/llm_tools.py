@@ -48,28 +48,23 @@ def get_content_by_week(week: int, vectordb=vectordb):
     return result
 
 
-def stream_llm_response(query):
-    prompt = PromptTemplate(
-                template=config.get("template"), 
-                input_variables=config.get("input_variables")
-            )
-    llm_chain = prompt | llm
-
-    output = []
+def stream_llm_output(llm_chain, query):
     for chunk in llm_chain.stream(query):
-        print(chunk.content, end="", flush=True)
+        # print(chunk.content, end="", flush=True)
         yield chunk.content
 
+def invoke_llm_output(llm_chain, query):
+    return llm_chain.invoke(query).content
 
-def get_llm_response(query):
+
+def build_llm_chain(template, input_vars, llm=llm):
     prompt = PromptTemplate(
-                template=config.get("template"), 
-                input_variables=config.get("input_variables")
-            )
+        template=template, 
+        input_variables=input_vars
+    )
     llm_chain = prompt | llm
 
-    output = []
-    return llm_chain.invoke(query).content
+    return llm_chain
 
 
 if __name__ == "__main__":
