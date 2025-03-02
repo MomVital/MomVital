@@ -1,8 +1,3 @@
-import json
-
-with open('config.json', 'r', encoding='utf-8') as file:
-    config = json.load(file)
-
 hb_analysis_template = """
 According to the given mom's heart beat: {bpms},
 give me some suggestions.

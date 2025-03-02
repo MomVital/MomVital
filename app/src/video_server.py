@@ -32,5 +32,5 @@ async def analyze(file: UploadFile = File(...)):
         }
     
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Upload failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Video Analyzing failed: {str(e)}")
 

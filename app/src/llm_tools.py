@@ -6,7 +6,6 @@ from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 import os
-from src.variables import config
 
 load_dotenv()
 
@@ -65,11 +64,4 @@ def build_llm_chain(template, input_vars, llm=llm):
     llm_chain = prompt | llm
 
     return llm_chain
-
-
-if __name__ == "__main__":
-    get_llm_response({
-        "question": "what I need to do", 
-        "context": get_content_by_week(10)
-    })
 

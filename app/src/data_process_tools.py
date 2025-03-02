@@ -4,7 +4,6 @@ import pyhrv.time_domain as td
 import statistics
 import time
 from scipy.signal import find_peaks
-from src.variables import config
 
 import time
 import functools
@@ -145,7 +144,7 @@ def hrv_process(nni_seq, histogram_path='data/nni_histogram.png'):
         dict: Dictionary containing HRV time-domain metrics.
     """
     results = td.time_domain(nni=nni_seq)
-    results['nni_histogram'].savefig(histogram_path)
+    # results['nni_histogram'].savefig(histogram_path)
     result_dict = results.__dict__
     result_dict.pop('nni_histogram', None)
     result_dict
@@ -161,14 +160,14 @@ def convert_np_type(obj):
     return obj
 
 
-def remove_useless_data(data):
-    data.pop('timesES')
-    data.pop('nni_seq')
-    for k, v in data['hrv_results'].items():
-        if k in ['sdnn', 'rmssd', 'pnn50']:
-            data[k] = data['hrv_results'][k]
-    data.pop('hrv_results')
-    return data
+# def remove_useless_data(data):
+#     data.pop('timesES')
+#     data.pop('nni_seq')
+#     for k, v in data['hrv_results'].items():
+#         if k in ['sdnn', 'rmssd', 'pnn50']:
+#             data[k] = data['hrv_results'][k]
+#     data.pop('hrv_results')
+#     return data
 
 def normalize(value, min_val, max_val):
     """Normalize a value to a range between 0 and 1."""
@@ -222,11 +221,11 @@ def overall_process(videoFileName='data/vid.avi'):
         "pnn50": pnn50,
         "stress_level": stress_lvl
     }
-    return orjson.dumps(result, option=orjson.OPT_INDENT_2)
+    return orjson.loads(orjson.dumps(result, option=orjson.OPT_INDENT_2))
 
 if __name__ == "__main__":
     # temp = overall_process()
     with open('data/temp_data.json', 'r') as file:
         data = json.load(file)
 
-    print(remove_useless_data(data))
+    # print(remove_useless_data(data))
