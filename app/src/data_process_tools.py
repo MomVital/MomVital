@@ -170,6 +170,29 @@ def remove_useless_data(data):
     data.pop('hrv_results')
     return data
 
+def normalize(value, min_val, max_val):
+    """Normalize a value to a range between 0 and 1."""
+    return (value - min_val) / (max_val - min_val) if max_val > min_val else 0
+
+def calculate_stress_level(sdnn, rmssd, pnn50, min_sdnn=20, max_sdnn=200, 
+                           min_rmssd=20, max_rmssd=200, min_pnn50=0, max_pnn50=50):
+    """
+    Calculate stress level based on SDNN, RMSSD, and PNN50.
+    The output is a score between 0 (low stress) and 100 (high stress).
+    """
+    # Normalize values
+    norm_sdnn = normalize(sdnn, min_sdnn, max_sdnn)
+    norm_rmssd = normalize(rmssd, min_rmssd, max_rmssd)
+    norm_pnn50 = normalize(pnn50, min_pnn50, max_pnn50)
+    
+    # Weights for each metric
+    W1, W2, W3 = 0.40, 0.40, 0.20
+    
+    # Compute stress score
+    stress_score = 100 * (1 - (W1 * norm_sdnn + W2 * norm_rmssd + W3 * norm_pnn50))
+    
+    # Ensure the score is within bounds (0-100)
+    return np.clip(stress_score, 0, 100)
 
 @execution_timer
 def overall_process(videoFileName='data/vid.avi'):
@@ -187,13 +210,17 @@ def overall_process(videoFileName='data/vid.avi'):
         hrv_results_dict[k] = convert_np_type(v)
 
     bpms_lst = [item.tolist() for item in bpmES]
+    sdnn = hrv_results_dict['sdnn']
+    rmssd = hrv_results_dict['rmssd']
+    pnn50 = hrv_results_dict['pnn50']
+    stress_lvl = calculate_stress_level(sdnn, rmssd, pnn50)
     
     result = {
         "bpms": sum(bpms_lst) / len(bpms_lst),
-        "sdnn": hrv_results_dict['sdnn'],
-        "rmssd": hrv_results_dict['rmssd'],
-        "pnn50": hrv_results_dict['pnn50'],
-        "stress_level": (hrv_results_dict['sdnn'] + hrv_results_dict['rmssd'] + hrv_results_dict['pnn50']) / 3 * 100
+        "sdnn": sdnn,
+        "rmssd": rmssd,
+        "pnn50": pnn50,
+        "stress_level": stress_lvl
     }
     return orjson.dumps(result, option=orjson.OPT_INDENT_2)
 
