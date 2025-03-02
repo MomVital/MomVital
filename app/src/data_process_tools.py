@@ -153,19 +153,22 @@ def hrv_process(nni_seq):
     return result_dict
 
 
-def sub_keys(dict, keys):
-    for key in keys:
-        if dict.get(key):
-            dict[config.get(key)] = dict.pop(key)
-    return dict
-
-
 def convert_np_type(obj):
     if isinstance(obj, (np.int64, np.int32)):  
         return int(obj)  # Convert int64 to Python int
     elif isinstance(obj, (np.float64, np.float32)):
         return float(obj)
     return obj
+
+
+def remove_useless_data(data):
+    data.pop('timesES')
+    data.pop('nni_seq')
+    for k, v in data['hrv_results'].items():
+        if k in ['sdnn', 'rmssd', 'pnn50']:
+            data[k] = data['hrv_results'][k]
+    data.pop('hrv_results')
+    return data
 
 
 @execution_timer
@@ -188,20 +191,13 @@ def overall_process(videoFileName='data/vid.avi'):
         "timesES": [convert_np_type(item) for item in timesES.tolist()],
         "bpmES": [item.tolist() for item in bpmES],
         "nni_seq": [convert_np_type(item) for item in nni_seq.tolist()],
-        "hrv_results": sub_keys(hrv_results_dict, config.get('hrv_sub_keys'))
+        "hrv_results": hrv_results_dict
     }
-    result = sub_keys(result, config.get('result_sub_keys'))
     return orjson.dumps(result, option=orjson.OPT_INDENT_2)
 
 if __name__ == "__main__":
     # temp = overall_process()
     with open('data/temp_data.json', 'r') as file:
         data = json.load(file)
-    data.pop('timesES')
-    data.pop('NNI_SEQ (Normal-to-Normal Interval Sequence) – A sequence of time intervals between consecutive normal heartbeats, crucial for heart rate variability (HRV) analysis and stress detection.')
-    for k, v in data['hrv_results'].items():
-        if k.startswith(('SDNN', 'RMSSD', 'PNN50')):
-            data[k] = data['hrv_results'][k]
-    data.pop('hrv_results')
 
-    print(data)
+    print(remove_useless_data(data))
