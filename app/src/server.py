@@ -14,6 +14,7 @@ def hello_world():
 
 @app.post("/analyze/")
 async def analyze(file: UploadFile = File(...)):
+    print("Running API Analyze")
     try:
         file_path = os.path.join(UPLOAD_DIR, file.filename)
 
