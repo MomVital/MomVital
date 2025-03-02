@@ -191,7 +191,7 @@ def overall_process(videoFileName='data/vid.avi'):
         "hrv_results": sub_keys(hrv_results_dict, config.get('hrv_sub_keys'))
     }
     result = sub_keys(result, config.get('result_sub_keys'))
-    return result
+    return orjson.dumps(result, option=orjson.OPT_INDENT_2)
 
 if __name__ == "__main__":
     # temp = overall_process()
