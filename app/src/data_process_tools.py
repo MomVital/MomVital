@@ -169,9 +169,9 @@ def convert_np_type(obj):
 
 
 @execution_timer
-def overall_process():
+def overall_process(videoFileName='data/vid.avi'):
     # Step 1: Process video → Extract bvps, timesES, bpmES
-    bvps, timesES, bpmES = vhr_process()
+    bvps, timesES, bpmES = vhr_process(videoFileName)
 
     # Step 2: Transform bvps → Get NN intervals (nni_seq)
     nni_seq = bvp_transform(bvps)
