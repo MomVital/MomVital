@@ -4,9 +4,15 @@ from src.llm_tools import (stream_llm_output, invoke_llm_output, build_llm_chain
 from src.variables import *
 from fastapi import FastAPI, HTTPException, Request
 import re, ast
-
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow Expo (replace with your frontend URL)
+    allow_methods=["POST", "OPTIONS"],
+    allow_headers=["Content-Type"],
+)
 
 @app.post("/hb-analyze/")
 async def stream_hr_analyze(request: Request):
