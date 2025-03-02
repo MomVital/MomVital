@@ -174,8 +174,8 @@ def normalize(value, min_val, max_val):
     """Normalize a value to a range between 0 and 1."""
     return (value - min_val) / (max_val - min_val) if max_val > min_val else 0
 
-def calculate_stress_level(sdnn, rmssd, pnn50, min_sdnn=20, max_sdnn=200, 
-                           min_rmssd=20, max_rmssd=200, min_pnn50=0, max_pnn50=50):
+def calculate_stress_level(sdnn, rmssd, pnn50, min_sdnn=20, max_sdnn=500, 
+                           min_rmssd=20, max_rmssd=500, min_pnn50=0, max_pnn50=100):
     """
     Calculate stress level based on SDNN, RMSSD, and PNN50.
     The output is a score between 0 (low stress) and 100 (high stress).
