@@ -10,9 +10,9 @@ import os, logging
 load_dotenv()
 
 llm = ChatOpenAI(
-  openai_api_key=os.getenv("API_KEY"),
-  openai_api_base="https://openrouter.ai/api/v1",
-  model_name=os.getenv("MODEL_NAME")
+    openai_api_key=os.getenv("API_KEY"),
+    openai_api_base="https://openrouter.ai/api/v1",
+    model_name=os.getenv("MODEL_NAME")
 )
 
 embeddings_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
@@ -23,15 +23,16 @@ def search(query, vectordb=vectordb, k=20):
     # Perform similarity search
     results = vectordb.similarity_search_with_score(query, k=k)
     return results
-    
+
 
 def search_filter(results_with_score=None, vectordb=vectordb, week_filter=None, section_filter=None):
     documents = results_with_score or [(doc, None) for doc in vectordb.docstore._dict.values()]
     return [
         (doc, score) for doc, score in documents
         if (week_filter is None or doc.metadata.get("week") == week_filter)
-        and (section_filter is None or doc.metadata.get("section") == section_filter)
+           and (section_filter is None or doc.metadata.get("section") == section_filter)
     ]
+
 
 def get_content_by_week(week: int, vectordb=vectordb):
     docs = search_filter(week_filter=week, vectordb=vectordb)
@@ -61,10 +62,9 @@ def invoke_llm_output(llm_chain, query):
 
 def build_llm_chain(template, input_vars, llm=llm):
     prompt = PromptTemplate(
-        template=template, 
+        template=template,
         input_variables=input_vars
     )
     llm_chain = prompt | llm
 
     return llm_chain
-

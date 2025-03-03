@@ -3,7 +3,7 @@ from src.llm_tools import (stream_llm_output, invoke_llm_output, build_llm_chain
                            get_content_by_week, search, search_filter)
 from src.variables import *
 from fastapi import FastAPI, HTTPException, Request
-import re, ast
+import re, ast, logging
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -18,6 +18,7 @@ app.add_middleware(
 async def stream_hr_analyze(request: Request):
     try:
         data = await request.json()
+        logging.info(f"Running hb-analyze with {data}")
         chain = build_llm_chain(template=hb_analysis_template, input_vars=hb_input_variables)
         
         required_keys = set(hb_input_variables)
@@ -41,6 +42,7 @@ async def stream_hr_analyze(request: Request):
 async def stream_hrv_analyze(request: Request):
     try:
         data = await request.json()
+        logging.info(f"Running hrv-analyze with {data}")
         chain = build_llm_chain(template=hrv_analysis_template, input_vars=hrv_input_variables)
         
         required_keys = set(hrv_input_variables)
@@ -64,6 +66,7 @@ async def stream_hrv_analyze(request: Request):
 async def stream_stress_analyze(request: Request):
     try:
         data = await request.json()
+        logging.info(f"Running stress-analyze with {data}")
         chain = build_llm_chain(template=stress_analysis_template, input_vars=stress_input_variables)
         
         required_keys = set(stress_input_variables) - {"context"}
@@ -88,6 +91,7 @@ async def stream_stress_analyze(request: Request):
 async def get_overall_analyze(request: Request):
     try:
         data = await request.json()
+        logging.info(f"Running overall-analyze with {data}")
         chain = build_llm_chain(template=overall_analysis_template, input_vars=overall_input_variables)
         
         required_keys = set(overall_input_variables) - {"context"} | {"history_result"}
