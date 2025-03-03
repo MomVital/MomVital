@@ -43,6 +43,7 @@ async def stream_hr_analyze(request: Request):
             return invoke_llm_output(chain, query)
     
     except Exception as e:
+        logging.error(f"Get Heart Rate Analysis failed: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Get Heart Rate Analysis failed: {str(e)}")
 
 
@@ -67,6 +68,7 @@ async def stream_hrv_analyze(request: Request):
             return invoke_llm_output(chain, query)
     
     except Exception as e:
+        logging.error(f"Get HRV Analysis failed: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Get HRV Analysis failed: {str(e)}")
 
 
@@ -92,6 +94,7 @@ async def stream_stress_analyze(request: Request):
             return invoke_llm_output(chain, query)
     
     except Exception as e:
+        logging.error(f"Get Stress Analysis failed: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Get Stress Analysis failed: {str(e)}")
 
 
@@ -128,4 +131,5 @@ async def get_overall_analyze(request: Request):
             }
     
     except Exception as e:
+        logging.error(f"Get Overall Analysis failed: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Get Overall Analysis failed: {str(e)}")
