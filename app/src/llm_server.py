@@ -3,8 +3,16 @@ from src.llm_tools import (stream_llm_output, invoke_llm_output, build_llm_chain
                            get_content_by_week, search, search_filter)
 from src.variables import *
 from fastapi import FastAPI, HTTPException, Request
-import re, ast, logging
+import re, ast
 from fastapi.middleware.cors import CORSMiddleware
+import logging
+import sys
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
 
 app = FastAPI()
 app.add_middleware(
