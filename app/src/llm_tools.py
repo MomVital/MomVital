@@ -5,7 +5,7 @@ import re
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
-import os
+import os, logging
 
 load_dotenv()
 
@@ -49,11 +49,14 @@ def get_content_by_week(week: int, vectordb=vectordb):
 
 def stream_llm_output(llm_chain, query):
     for chunk in llm_chain.stream(query):
-        # print(chunk.content, end="", flush=True)
+        logging.info(chunk.content)
         yield chunk.content
 
+
 def invoke_llm_output(llm_chain, query):
-    return llm_chain.invoke(query).content
+    result = llm_chain.invoke(query).content
+    logging.info(result)
+    return result
 
 
 def build_llm_chain(template, input_vars, llm=llm):
